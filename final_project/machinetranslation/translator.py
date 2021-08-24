@@ -29,7 +29,7 @@ def english_to_french(english_text):
         french_text = language_translator.translate(
             text=english_text,
             model_id='en-fr').get_result()['translations'][0]['translation']
-    except Exception as e:
+    except Exception:
         french_text = ''
     return french_text
 
@@ -42,6 +42,6 @@ def french_to_english(french_text):
         english_text = language_translator.translate(
             text=french_text,
             model_id='fr-en').get_result()['translations'][0]['translation']
-    except Exception as e:
+    except Exception:
         english_text = ''
     return english_text
