@@ -6,12 +6,12 @@ from translator import english_to_french, french_to_english
 class TestEnglishToFrench(unittest.TestCase):
     def test1(self):
         self.assertEqual(english_to_french('Hello'), 'Bonjour')
-        self.assertIsNotNone(english_to_french(''), 'Test value is none.')
+        self.assertNotEqual(english_to_french(''), '')
 
 
 class testFrenchToEnglish(unittest.TestCase):
     def test1(self):
         self.assertEqual(french_to_english('Bonjour'), 'Hello')
-        self.assertIsNotNone(french_to_english(''), 'Test value is none.')
+        self.assertNotEqual(french_to_english(''), '')
 
 unittest.main()
